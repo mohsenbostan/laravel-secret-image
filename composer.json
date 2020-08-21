@@ -1,0 +1,54 @@
+{
+    "name": "mohsenbostan/laravel-secret-image",
+    "description": "A package to save images secretly.",
+    "keywords": [
+        "mohsenbostan",
+        "laravel-secret-image"
+    ],
+    "homepage": "https://github.com/mohsenbostan/laravel-secret-image",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mohsen Bostan",
+            "email": "mohsenbostandev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mohsenbostan\\LaravelSecretImage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mohsenbostan\\LaravelSecretImage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mohsenbostan\\LaravelSecretImage\\LaravelSecretImageServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSecretImage": "Mohsenbostan\\LaravelSecretImage\\LaravelSecretImageFacade"
+            }
+        }
+    }
+}
