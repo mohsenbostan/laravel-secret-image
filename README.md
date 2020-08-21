@@ -14,14 +14,66 @@ You can install the package via composer:
 ```bash
 composer require mohsenbostan/laravel-secret-image
 ```
+after installing package using composer, you should publish configs:
+
+``` bash
+php artisan vendor:publish --provider=Mohsenbostan\LaravelSecretImage\LaravelSecretImageServiceProvider
+```
 
 ## Usage
 
-*Save Single Secret Image*
+**Custom Storage Driver**
+
+you can set a custom storage driver in `config/laravel-secret-image.php`
+
+```php
+<?php
+
+return [
+    /*
+     * Default Storage Driver To Save Images
+     * -------------------------------------
+     * Note: Don't use `public` for driver or path.
+     */
+    'storage_driver' => env('FILESYSTEM_DRIVER', 'local'),
+];
+```
+
+**Custom Middlewares**
+
+you can set custom middlewares to protect images in `config/laravel-secret-image.php`
+
+```php
+<?php
+
+return [
+    /*
+     * Default Middlewares To Protect Images
+     */
+    'middlewares' => [
+        'auth'
+    ]
+];
+```
+
+**Save Single Secret Image**
+
+`saveSingleImage` method will return image path.
+
 ``` php
 use  \Mohsenbostan\LaravelSecretImage\LaravelSecretImage;
 
 $image = LaravelSecretImage::saveSingleImage(request()->file('image'));
+``` 
+
+**Get Secret Image Url**
+
+`getImageUrl` method will return image url.
+
+``` php
+use  \Mohsenbostan\LaravelSecretImage\LaravelSecretImage;
+
+$url = LaravelSecretImage::getImageUrl($image);
 ``` 
 
 ### Testing
