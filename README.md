@@ -1,4 +1,4 @@
-# Very short description of the package
+# Laravel Secret Image
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mohsenbostan/laravel-secret-image.svg?style=flat-square)](https://packagist.org/packages/mohsenbostan/laravel-secret-image)
 [![Total Downloads](https://img.shields.io/packagist/dt/mohsenbostan/laravel-secret-image.svg?style=flat-square)](https://packagist.org/packages/mohsenbostan/laravel-secret-image)
