@@ -17,6 +17,8 @@ composer require mohsenbostan/laravel-secret-image
 
 ## Usage
 
+*Save Single Secret Image*
+``` php
 use  \Mohsenbostan\LaravelSecretImage\LaravelSecretImage;
 
 $image = LaravelSecretImage::saveSingleImage(request()->file('image'));
