@@ -1,8 +1,6 @@
 # Very short description of the package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mohsenbostan/laravel-secret-image.svg?style=flat-square)](https://packagist.org/packages/mohsenbostan/laravel-secret-image)
-[![Build Status](https://img.shields.io/travis/mohsenbostan/laravel-secret-image/master.svg?style=flat-square)](https://travis-ci.org/mohsenbostan/laravel-secret-image)
-[![Quality Score](https://img.shields.io/scrutinizer/g/mohsenbostan/laravel-secret-image.svg?style=flat-square)](https://scrutinizer-ci.com/g/mohsenbostan/laravel-secret-image)
 [![Total Downloads](https://img.shields.io/packagist/dt/mohsenbostan/laravel-secret-image.svg?style=flat-square)](https://packagist.org/packages/mohsenbostan/laravel-secret-image)
 
 This is package helps you to save your images secretly and show theme just to authenticated users.
