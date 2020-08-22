@@ -56,12 +56,22 @@ return [
 
 **Save Single Secret Image**
 
-`saveSingleImage` method will return image path.
+`saveSingleImage` method will save image and return the image path.
 
 ``` php
 use  \Mohsenbostan\LaravelSecretImage\LaravelSecretImage;
 
 $image = LaravelSecretImage::saveSingleImage(request()->file('image'));
+``` 
+
+**Save Multiple Secret Images**
+
+`saveMultiImages` method will save all images and return the images' path.
+
+``` php
+use  \Mohsenbostan\LaravelSecretImage\LaravelSecretImage;
+
+$image = LaravelSecretImage::saveMultiImages(request()->file('images'));
 ``` 
 
 **Get Secret Image Url**
