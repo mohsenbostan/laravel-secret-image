@@ -72,7 +72,7 @@ $image = LaravelSecretImage::saveSingleImage(request()->file('image'));
 ``` php
 use  \Mohsenbostan\LaravelSecretImage\LaravelSecretImage;
 
-$image = LaravelSecretImage::saveMultiImages(request()->file('images'));
+$images = LaravelSecretImage::saveMultiImages(request()->file('images'));
 ``` 
 
 **Get Secret Image Url**
