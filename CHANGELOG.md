@@ -1,7 +1,7 @@
 # Changelog
 
-All notable changes to `laravel-secret-image` will be documented in this file
+Welcome To ChangeLog.
 
-## 1.0.0 - 201X-XX-XX
+## 1.2.0 - 2020-09-03
 
-- initial release
+- Stable Version

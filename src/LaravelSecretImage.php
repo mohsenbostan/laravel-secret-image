@@ -24,7 +24,7 @@ class LaravelSecretImage
 
             return is_null($newImageName)
                 ? Storage::disk($storage_driver)->putFile($path, $image)
-                : Storage::disk($storage_driver)->putFileAs($path, $image, $path, $newImageName . '.' . $image->getClientOriginalExtension());
+                : Storage::disk($storage_driver)->putFileAs($path, $image, $newImageName . '.' . $image->getClientOriginalExtension());
         }
 
         throw new HttpException(422, 'the provided path is not secret. Please remove the `public` from the beginning.');
@@ -34,28 +34,18 @@ class LaravelSecretImage
      * Save Multiple Images
      * @param $images
      * @param string $path
-     * @param null $newImageName
      * @return array
      */
-    public static function saveMultiImages($images, $path = 'secret-image', $newImageName = null): array
+    public static function saveMultiImages($images, $path = 'secret-image'): array
     {
         if (Str::substr($path, 0, 6) !== 'public') {
 
             $storage_driver = config('laravel-secret-image.storage_driver');
             $key = 0;
             $images_path = [];
-            if (is_null($newImageName)) {
-                foreach ($images as $image) {
-                    $images_path[$key++] = Storage::disk($storage_driver)->putFile($path, $image);
-                }
-
-                return $images_path;
-            }
-
             foreach ($images as $image) {
-                $images_path[$key++] = Storage::disk($storage_driver)->putFileAs($path, $image, $path, $newImageName . '.' . $image->getClientOriginalExtension());
+                $images_path[$key++] = Storage::disk($storage_driver)->putFile($path, $image);
             }
-
             return $images_path;
         }
 
